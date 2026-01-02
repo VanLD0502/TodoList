@@ -1,0 +1,16 @@
+git init
+Initialized empty Git repository in D:/AMyProjectWeb/TodoX/.git/
+PS D:\AMyProjectWeb\TodoX> git remote add origin "https://github.com/VanLD0502/TodoList.git"       
+PS D:\AMyProjectWeb\TodoX> git add .
+
+git reset
+git branch
+
+git clone 
+git checkout -b vanyeuduyen vừa di chuyển , nếu chưa có tạo.
+git status
+
+
+PS D:\AMyProjectWeb\TodoX> git remote -v
+origin  https://github.com/VanLD0502/TodoList.git (fetch)
+origin  https://github.com/VanLD0502/TodoList.git (push)
