@@ -6,7 +6,6 @@ import {
 	updateTask,
 } from "../controllers/tasksControllers.js";
 const router = express.Router();
-
 router.get("/", getAllTasks);
 
 router.post("/", createTask);
