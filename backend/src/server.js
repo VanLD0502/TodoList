@@ -1,9 +1,19 @@
 import express from "express";
 import taskRoute from "./routes/tasksRouters.js";
+import { connectDB } from "./config/db.js";
+import dotenv from "dotenv";
+import cors from "cors";
+dotenv.config();
+
+const PORT = process.env.PORT || 5001;
+
 const app = express();
 
+app.use(express.json());
+app.use(cors({ origin: "http://localhost:5173" }));
 app.use("/api/tasks", taskRoute);
-
-app.listen(5001, () => {
-	console.log("server bat dau tren cong 5001");
+connectDB().then(() => {
+	app.listen(PORT, () => {
+		console.log(`server bat dau tren cong ${PORT}`);
+	});
 });
